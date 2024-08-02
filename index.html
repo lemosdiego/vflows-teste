@@ -179,8 +179,8 @@
           <!-- Produtos -->
           <div class="panel panel-default">
             <div class="panel-heading">Produtos</div>
-            <div class="panel-body">
-              <div class="panel panel-default">
+            <div class="panel-body" id="product-list">
+              <div class="panel panel-default" data-product>
                 <div class="panel-body">
                   <div class="row fs-display-flex fs-align-items-center">
                     <div
@@ -244,7 +244,7 @@
                   </div>
                 </div>
               </div>
-              <button class="btn btn-primary btn-block">
+              <button class="btn btn-primary btn-block" id="add-product-button">
                 Adicionar Produto
               </button>
             </div>
@@ -261,7 +261,6 @@
               <button class="btn btn-primary btn-block">Incluir Anexo</button>
             </div>
           </div>
-
           <button type="submit" class="btn btn-success btn-block btn-lg">
             Salvar Fornecedor
           </button>
@@ -271,5 +270,6 @@
     <script src="/assets/libs/jquery/jquery-3.7.1.min.js"></script>
     <script src="/assets/libs/fluig-style-guide/js/fluig-style-guide.min.js"></script>
     <script src="/assets/js/address.js"></script>
+    <script src="/assets/js/products.js"></script>
   </body>
 </html>
