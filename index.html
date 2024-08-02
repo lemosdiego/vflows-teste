@@ -13,7 +13,7 @@
   <body>
     <div class="fluig-style-guide">
       <div class="container">
-        <form action="" role="form">
+        <form id="company-form" role="form">
           <!-- Dados do Fornecedor -->
           <div class="panel panel-default">
             <div class="panel-heading">Dados do Fornecedor</div>
@@ -25,6 +25,7 @@
                     type="text"
                     class="form-control"
                     id="input-razao-social"
+                    name="razaoSocial"
                     required
                   />
                 </div>
@@ -34,6 +35,7 @@
                     type="text"
                     class="form-control"
                     id="input-cnpj"
+                    name="cnpj"
                     required
                   />
                 </div>
@@ -45,6 +47,7 @@
                     type="text"
                     class="form-control"
                     id="einput-name"
+                    name="nomeFantasia"
                     required
                   />
                 </div>
@@ -56,6 +59,7 @@
                     type="text"
                     class="form-control"
                     id="input-inscricao-estadual"
+                    name="inscricaoEstadual"
                   />
                 </div>
               </div>
@@ -66,6 +70,7 @@
                     type="text"
                     class="form-control"
                     id="input-cep"
+                    name=""
                     required
                   />
                 </div>
@@ -77,6 +82,7 @@
                     type="text"
                     class="form-control"
                     id="input-inscricao-municipal"
+                    name="inscricaoMunicipal"
                   />
                 </div>
               </div>
@@ -152,6 +158,7 @@
                     type="text"
                     class="form-control"
                     id="input-nome-pessoa-contato"
+                    name="nomeContato"
                     required
                   />
                 </div>
@@ -161,6 +168,7 @@
                     type="email"
                     class="form-control"
                     id="input-email"
+                    name="emailContato"
                     required
                   />
                 </div>
@@ -170,6 +178,7 @@
                     type="tel"
                     class="form-control"
                     id="input-telefone"
+                    name="telefoneContato"
                     required
                   />
                 </div>
@@ -272,8 +281,10 @@
       </div>
     </div>
     <script src="/assets/libs/jquery/jquery-3.7.1.min.js"></script>
+    <script src="/assets/libs/mustache/mustache.min.js"></script>
     <script src="/assets/libs/fluig-style-guide/js/fluig-style-guide.min.js"></script>
     <script src="/assets/js/address.js"></script>
     <script src="/assets/js/products.js"></script>
+    <script src="/assets/js/form.js"></script>
   </body>
 </html>
