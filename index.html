@@ -87,6 +87,7 @@
                     type="text"
                     class="form-control"
                     id="input-endereco"
+                    data-autocomplete="address"
                     required
                   />
                 </div>
@@ -117,6 +118,7 @@
                     type="text"
                     class="form-control"
                     id="input-bairro"
+                    data-autocomplete="address"
                     required
                   />
                 </div>
@@ -126,6 +128,7 @@
                     type="text"
                     class="form-control"
                     id="input-municipio"
+                    data-autocomplete="address"
                     required
                   />
                 </div>
@@ -135,6 +138,7 @@
                     type="text"
                     class="form-control"
                     id="input-estado"
+                    data-autocomplete="address"
                     required
                   />
                 </div>
@@ -252,13 +256,15 @@
               <button class="btn btn-primary btn-block">Incluir Anexo</button>
             </div>
           </div>
+
           <button type="submit" class="btn btn-success btn-block btn-lg">
             Salvar Fornecedor
           </button>
         </form>
       </div>
     </div>
-
+    <script src="/assets/libs/jquery/jquery-3.7.1.min.js"></script>
     <script src="/assets/libs/fluig-style-guide/js/fluig-style-guide.min.js"></script>
+    <script src="/assets/js/address.js"></script>
   </body>
 </html>
