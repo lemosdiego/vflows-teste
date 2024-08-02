@@ -186,55 +186,59 @@
                     <div
                       class="col-lg-2 fs-display-flex fs-justify-content-center"
                     >
-                      <i
-                        class="flaticon flaticon-trash icon-thumbnail-md text-danger"
-                        aria-hidden="true"
-                      ></i>
+                      <button
+                        type="button"
+                        class="btn"
+                        data-product-remove
+                        disabled
+                      >
+                        <i
+                          class="flaticon flaticon-trash icon-thumbnail-md text-danger"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
                     </div>
                     <div class="form-group col-lg-10">
                       <fieldset>
                         <div class="row">
                           <div class="form-group col-lg-12">
-                            <label for="input-produto">Produto</label>
-                            <input
-                              type="tel"
-                              class="form-control"
-                              id="input-produto"
-                              required
-                            />
+                            <label>Produto</label>
+                            <input type="text" class="form-control" required />
                           </div>
                         </div>
                         <div class="row">
                           <div class="form-group col-lg-3">
-                            <label for="input-Medida">UND.Medida</label>
-                            <select name="" id="" class="form-control"></select>
+                            <label>UND.Medida</label>
+                            <select class="form-control">
+                              <option value=""></option>
+                              <option value="Litro">Litro</option>
+                              <option value="Kg">Kg</option>
+                            </select>
                           </div>
                           <div class="form-group col-lg-3">
-                            <label for="input-estoque">QDTDE. em Estoque</label>
+                            <label>QDTDE. em Estoque</label>
                             <input
                               type="number"
                               class="form-control"
-                              id="input-estoque"
+                              data-product-field="quantity"
                               required
                             />
                           </div>
                           <div class="form-group col-lg-3">
-                            <label for="input-valor-unitario"
-                              >Valor Unitário</label
-                            >
+                            <label>Valor Unitário</label>
                             <input
                               type="number"
                               class="form-control"
-                              id="input-valor-unitario"
+                              data-product-field="value"
                               required
                             />
                           </div>
                           <div class="form-group col-lg-3">
-                            <label for="input-valor-total">Valor Total</label>
+                            <label>Valor Total</label>
                             <input
                               type="number"
                               class="form-control"
-                              id="input-valor-total"
+                              data-product-field="total"
                               readonly
                             />
                           </div>
