@@ -2,7 +2,7 @@
 
 ## Cadastro Fornecedor/Produto
 
-#### Este projeto consiste na construção de um formulário para o cadastro de fornecedores e produtos
+#### Este projeto consiste na construção de um formulário para o cadastro de fornecedores e produtos.
 
 
 ## Preview
