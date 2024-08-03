@@ -5,19 +5,18 @@ $(document).ready(function () {
 
   function disabledAddressFields(disabled) {
     getAddressFields().each(function () {
-      $(this).attr('disabled', disabled);
+      $(this).attr("disabled", disabled);
     });
   }
 
   function resetAddressFields() {
     getAddressFields().each(function () {
-      $(this).val('');
+      $(this).val("");
     });
   }
 
-  $('#input-cep').on('blur', function () {
+  $("#input-cep").on("blur", function () {
     if (this.checkValidity()) {
-      // TODO: sanitizar zipcode
       const zipcode = $(this).val();
 
       resetAddressFields();
@@ -25,18 +24,18 @@ $(document).ready(function () {
 
       $.ajax({
         url: `https://viacep.com.br/ws/${zipcode}/json/`,
-        type: 'GET',
+        type: "GET",
         success: function (response) {
-          $('#input-endereco').val(response.logradouro);
-          $('#input-bairro').val(response.bairro);
-          $('#input-municipio').val(response.localidade);
-          $('#input-estado').val(response.uf);
+          $("#input-endereco").val(response.logradouro);
+          $("#input-bairro").val(response.bairro);
+          $("#input-municipio").val(response.localidade);
+          $("#input-estado").val(response.uf);
           disabledAddressFields(false);
         },
         error: function () {
-          // TODO: Adicionar mensagem de erro
+          alert("Por favor, digite um CEP válido");
           disabledAddressFields(false);
-        }
+        },
       });
     }
   });
