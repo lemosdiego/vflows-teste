@@ -8,6 +8,8 @@ $(document).ready(function () {
     if (file) {
       const attachments = FLUIGC.sessionStorage.getItem(STORAGE_NAME) || [];
 
+      const fileURL = URL.createObjectURL(file);
+
       attachments.push({
         indice: attachments.length + 1,
         nomeArquivo: file.name,
@@ -18,6 +20,7 @@ $(document).ready(function () {
       const attachmentPanel = $("[data-attachment]").first().clone(true);
 
       attachmentPanel.find("span.lead").text(file.name);
+      attachmentPanel.data("fileURL", fileURL);
 
       attachmentPanel.removeClass("fs-display-none");
 
@@ -26,7 +29,7 @@ $(document).ready(function () {
   });
 
   $("[data-attachment-remove]").click(function () {
-    const attachmentPanel = $(this).closest("[data-attachment]");
+    const attachmentPanel = $(this).parents("[data-attachment]");
     const fileName = attachmentPanel.find("span.lead").text();
 
     attachmentPanel.remove();
@@ -40,6 +43,22 @@ $(document).ready(function () {
 
     if (updatedAttachments.length === 0) {
       $("#no-attachment").removeClass("fs-display-none");
+    }
+  });
+
+  $("[data-attachment-download]").click(function () {
+    const attachmentPanel = $(this).parents("[data-attachment]");
+    const fileURL = attachmentPanel.data("fileURL");
+
+    if (fileURL) {
+      const downloadLink = document.createElement("a");
+      downloadLink.href = fileURL;
+      downloadLink.download = attachmentPanel.find("span.lead").text();
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+
+      URL.revokeObjectURL(fileURL);
     }
   });
 });
