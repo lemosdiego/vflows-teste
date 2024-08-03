@@ -12,12 +12,17 @@
   </head>
   <body>
     <div class="fluig-style-guide">
+      <header class="fs-xl-margin">
+        <h1 class="text-center fs-color-black">CADASTRO FORNECEDOR/PRODUTO</h1>
+      </header>
       <div class="container">
         <form id="company-form" role="form">
           <!-- Dados do Fornecedor -->
           <div class="panel panel-default">
-            <div class="panel-heading">Dados do Fornecedor</div>
-            <div class="panel-body">
+            <div class="panel-heading fs-bg-info fs-color-white lead">
+              Dados do Fornecedor
+            </div>
+            <div class="panel-body fs-color-black">
               <div class="row">
                 <div class="form-group col-lg-8">
                   <label for="input-razao-social">Razão social</label>
@@ -187,8 +192,10 @@
           </div>
           <!-- Produtos -->
           <div class="panel panel-default">
-            <div class="panel-heading">Produtos</div>
-            <div class="panel-body" id="product-list">
+            <div class="panel-heading fs-bg-info fs-color-white lead">
+              Produtos
+            </div>
+            <div class="panel-body fs-color-black" id="product-list">
               <div class="panel panel-default" data-product>
                 <div class="panel-body">
                   <div class="row fs-display-flex fs-align-items-center">
@@ -276,7 +283,9 @@
           </div>
           <!-- Anexos -->
           <div class="panel panel-default">
-            <div class="panel-heading">Anexos</div>
+            <div class="panel-heading fs-bg-info fs-color-white lead">
+              Anexos
+            </div>
             <div class="panel-body">
               <div class="panel panel-default fs-display-none" data-attachment>
                 <div class="panel-body">
@@ -284,7 +293,7 @@
                     <div
                       class="col-lg-2 fs-display-flex fs-justify-content-space-around"
                     >
-                      <button class="btn text-danger">
+                      <button class="btn text-danger" data-attachment-remove>
                         <i
                           class="flaticon flaticon-trash icon-lg"
                           aria-hidden="true"
@@ -305,7 +314,7 @@
               </div>
               <div class="row text-center fs-md-padding" id="no-attachment">
                 <div class="col-lg-12">
-                  <span>Nenhum anexo</span>
+                  <span class="fs-color-black">Nenhum anexo</span>
                 </div>
               </div>
               <div
