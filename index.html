@@ -212,13 +212,22 @@
                         <div class="row">
                           <div class="form-group col-lg-12">
                             <label>Produto</label>
-                            <input type="text" class="form-control" required />
+                            <input
+                              type="text"
+                              class="form-control"
+                              data-product-name="descricaoProduto"
+                              required
+                            />
                           </div>
                         </div>
                         <div class="row">
                           <div class="form-group col-lg-3">
                             <label>UND.Medida</label>
-                            <select class="form-control">
+                            <select
+                              class="form-control"
+                              data-product-name="unidadeMedida"
+                              required
+                            >
                               <option value=""></option>
                               <option value="Litro">Litro</option>
                               <option value="Kg">Kg</option>
@@ -230,6 +239,7 @@
                               type="number"
                               class="form-control"
                               data-product-field="quantity"
+                              data-product-name="qtdeEstoque"
                               required
                             />
                           </div>
@@ -239,6 +249,7 @@
                               type="number"
                               class="form-control"
                               data-product-field="value"
+                              data-product-name="valorUnitario"
                               required
                             />
                           </div>
@@ -248,6 +259,7 @@
                               type="number"
                               class="form-control"
                               data-product-field="total"
+                              data-product-name="valorTotal"
                               readonly
                             />
                           </div>
