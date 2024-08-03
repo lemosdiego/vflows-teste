@@ -18,8 +18,28 @@ $(document).ready(function () {
       const attachmentPanel = $("[data-attachment]").first().clone(true);
 
       attachmentPanel.find("span.lead").text(file.name);
+
       attachmentPanel.removeClass("fs-display-none");
+
       attachmentPanel.insertBefore($(this).parents(".fs-cursor-pointer"));
+    }
+  });
+
+  $("[data-attachment-remove]").click(function () {
+    const attachmentPanel = $(this).closest("[data-attachment]");
+    const fileName = attachmentPanel.find("span.lead").text();
+
+    attachmentPanel.remove();
+
+    const attachments = FLUIGC.sessionStorage.getItem(STORAGE_NAME) || [];
+    const updatedAttachments = attachments.filter(
+      (attachment) => attachment.nomeArquivo !== fileName
+    );
+
+    FLUIGC.sessionStorage.setItem(STORAGE_NAME, updatedAttachments);
+
+    if (updatedAttachments.length === 0) {
+      $("#no-attachment").removeClass("fs-display-none");
     }
   });
 });

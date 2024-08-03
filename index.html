@@ -16,7 +16,7 @@
         <h1 class="text-center fs-color-black">CADASTRO FORNECEDOR/PRODUTO</h1>
       </header>
       <div class="container">
-        <form id="company-form" role="form">
+        <form class="fs-sm-margin-bottom" id="company-form" role="form">
           <!-- Dados do Fornecedor -->
           <div class="panel panel-default">
             <div class="panel-heading fs-bg-info fs-color-white lead">
@@ -190,6 +190,7 @@
               </div>
             </div>
           </div>
+
           <!-- Produtos -->
           <div class="panel panel-default">
             <div class="panel-heading fs-bg-info fs-color-white lead">
@@ -204,7 +205,7 @@
                     >
                       <button
                         type="button"
-                        class="btn"
+                        class="btn fs-no-bg"
                         data-product-remove
                         disabled
                       >
@@ -293,13 +294,19 @@
                     <div
                       class="col-lg-2 fs-display-flex fs-justify-content-space-around"
                     >
-                      <button class="btn text-danger" data-attachment-remove>
+                      <button
+                        class="btn text-danger fs-no-bg"
+                        data-attachment-remove
+                      >
                         <i
                           class="flaticon flaticon-trash icon-lg"
                           aria-hidden="true"
                         ></i>
                       </button>
-                      <button class="btn text-info">
+                      <button
+                        class="btn text-info fs-no-bg"
+                        data-attachment-download
+                      >
                         <i
                           class="flaticon flaticon-view icon-lg"
                           aria-hidden="true"
