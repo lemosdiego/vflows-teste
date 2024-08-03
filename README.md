@@ -4,6 +4,10 @@
 
 #### Este projeto consiste na construção de um formulário para o cadastro de fornecedores e produtos
 
+
+## Preview
+[![Preview do Projeto](assets/img/printproject.png)](https://vflows-teste.vercel.app/)
+
 ### Tecnologias Utilizadas
 + HTML5: Estruturação e marcação do formulário.
 + CSS: Utilização do Fluig Style Guide e Bootstrap para estilização e layout.
